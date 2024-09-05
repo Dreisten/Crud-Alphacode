@@ -1,0 +1,211 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    background-color: #068ed0;
+    color: white;
+    padding: 10px;
+}
+
+.header-container .logo {
+    width: 100px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.left-column,
+.right-column {
+    width: 40%; /* Cada coluna ocupa 48% do espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espaço entre os grupos de formulário */
+}
+
+.form-id label {
+    display: block; /* Faz o rótulo ocupar toda a largura disponível */
+    margin-bottom: 5px; /* Espaço abaixo do rótulo */
+    color: #333; /* Cor do texto padrão */
+    cursor: pointer; /* Muda o cursor para indicar que é interativo */
+    transition: color 0.3s ease-in-out; /* Transição suave na cor */
+    font-weight: 400;
+}
+
+.form-group label:hover,
+.form-group label:focus {
+    color: #068ed0; /* Cor azul ao passar o mouse ou focar */
+}
+
+/* Estilizando o checkbox */
+.form-group input[type="checkbox"] {
+    appearance: none; /* Remove a aparência padrão do checkbox */
+    width: 15px; /* Tamanho do checkbox */
+    height: 15px; /* Tamanho do checkbox */
+    border-radius: 3px; /* Bordas arredondadas */
+    border: 2px solid #b1b1b1; /* Cor da borda */
+    outline: none; /* Remove o contorno padrão */
+    cursor: pointer; /* Muda o cursor para indicar que é interativo */
+    background-color: #fff; /* Cor de fundo padrão */
+    position: relative; /* Necessário para posicionar o checkmark */
+    transition: background-color 0.4s ease, border-color 0.4s ease; /* Transições suaves */
+}
+
+/* Estilo quando o checkbox está marcado */
+.form-group input[type="checkbox"]:checked {
+    background-color: #068ed0; /* Cor de fundo quando marcado */
+    border-color: #068ed0; /* Cor da borda quando marcado */
+}
+
+/* Adicionando o checkmark */
+.form-group input[type="checkbox"]:checked::before {
+    content: '✔'; /* Símbolo de checkmark */
+    color: white; /* Cor do checkmark */
+    position: absolute; /* Posiciona o checkmark dentro do checkbox */
+    top: 40%; /* Centraliza verticalmente */
+    left: 40%; /* Centraliza horizontalmente */
+    transform: translate(-40%, -40%); /* Ajusta o posicionamento */
+    font-size: 11px; /* Tamanho do checkmark */
+}
+
+/* Remove borda e fundo dos inputs para parecer uma linha */
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    border: none;
+    background: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc; /* Linha embaixo do input */
+    border-radius: 0; /* Remove bordas arredondadas */
+    padding: 5px;
+    margin: 0;
+    display: block;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    border-bottom: 1px solid #0044cc; /* Linha azul ao focar */
+    outline: none; /* Remove o contorno padrão ao focar */
+}
+
+button {
+    padding: 10px 20px; /* Aumenta o padding para melhor aparência */
+    background-color: #068ed0;
+    color: white;
+    border: none;
+    border-radius: 4px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #068ed0;
+}
+.data-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.data-item img {
+    width: 20px; /* Tamanho dos ícones */
+    height: auto;
+    cursor: pointer;
+}
+
+.data-item .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #068ed0;
+    color: white;
+    padding: 10px;
+}
+.result-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 5;
+    }
+}
+
+.result-section h3 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #068ed0;
+    color: white;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 95px;
+    vertical-align: middle;
+}
+

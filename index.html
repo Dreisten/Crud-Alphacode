@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Contatos</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <!-- Container do topo -->
+        <div class="header-container">
+            <img src="img/logo_alphacode.png" alt="Logo" class="logo">
+            <h1>Cadastro de Contatos</h1>
+        </div>
+        
+    
+        <div class="container">
+            <div class="left-column">
+                <div class="form-group">
+                    <label for="text1">Nome Completo</label>
+                    <input type="text" id="text1" name="text1">
+                </div>
+                <div class="form-group">
+                    <label for="text2">E-mail</label>
+                    <input type="text" id="text2" name="text2">
+                </div>
+                <div class="form-group">
+                    <label for="text3">Telefone para contato</label>
+                    <input type="text" id="text3" name="text3">
+                </div>
+            </div>
+        
+            <div class="right-column">
+                <div class="form-group">
+                    <label for="text4">Data de nascimento</label>
+                    <input type="text" id="text4" name="text4">
+                </div>
+                <div class="form-group">
+                    <label for="text5">Profissão</label>
+                    <input type="text" id="text5" name="text5">
+                </div>
+                <div class="form-group">
+                    <label for="text6">Celular para contato</label>
+                    <input type="text" id="text6" name="text6">
+                </div>
+            </div>
+        </div>
+
+       
+    
+              <!-- Grupo de checkboxes -->
+            <div class="container">
+                <div class="left-column">
+                    <div class="form-group">
+                        <label><input type="checkbox" id="whatsapp" name="whatsapp"> Este número possui WhatsApp</label>
+                    </div>
+                    <div class="form-group">
+                        <label><input type="checkbox" id="notificacao" name="notificacao"> Enviar notificações por SMS</label>
+                    </div>
+                </div>
+
+                <div class="right-column">
+                    <div class="form-group">
+                        <label><input type="checkbox" id="notificacaoEmail" name="notificacaoEmail"> Enviar notificações por email</label>
+                    </div>
+
+                    <button id="submitBtn">Enviar</button>
+                   
+                </div>
+            </div>
+    </div>
+
+    <!-- Mensagem de erro -->
+<div id="error-message" style="color: red; display: none;">
+    Usuário já cadastrado!
+</div>
+                   
+  <!-- Seção onde os dados preenchidos aparecerão -->
+<div id="resultSection" class="result-section" style="display: none;">
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Nome Completo</th>
+                <th>Data de Nascimento</th>
+                <th>E-mail</th>
+                <th>Celular para Contato</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As linhas com os dados preenchidos serão adicionadas aqui -->
+        </tbody>
+    </table>
+</div>
+
+
+        <!-- Container do rodapé -->
+        <div class="footer-container">
+            <div class="footer-left">
+                Termos/Políticas
+            </div>
+            <div class="footer-center">
+                &copy; Copyright 2024 / Desenvolvido por <img src="img/logo_rodape_alphacode.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="footer-right">
+                &copy; Alphacode IT Solution 2024
+            </div>
+        </div>
+    
+        <script src="scripts.js"></script>
+    </body>
+    
+    </html>
